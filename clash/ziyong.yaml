@@ -1,7 +1,7 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-05-03 18:53:52
+# 创建时间：2023-05-03 19:08:35
 # 使用模版：ACL4SSR_AdblockPlus.ini
 # 节点数量：1
 ####################################
@@ -21,7 +21,7 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"defaultName","type":"http","server":"raw.githubusercontent.com/hebe061103/clash/main/config.yaml","port":null}
+  - {"name":"defaultName","type":"http","server":"anaer.github.io/Sub/clash.yaml","port":null}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
