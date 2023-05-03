@@ -1,9 +1,9 @@
 ####################################
 # 创建者：v2rayse.com
 # 客户端：Clash
-# 创建时间：2023-05-03 15:50:34
+# 创建时间：2023-05-03 18:53:52
 # 使用模版：ACL4SSR_AdblockPlus.ini
-# 节点数量：7
+# 节点数量：1
 ####################################
 mixed-port: 7890
 allow-lan: true
@@ -21,88 +21,46 @@ dns:
     - tls://dns.google:853
 
 proxies:
-  - {"name":"芜湖","type":"vmess","server":"47.87.152.162","port":16815,"cipher":"auto","uuid":"3e2b7a2d-2d0c-485c-8890-ed8123e21a5e","alterId":0,"tls":false,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"defaultName_1","type":"vmess","server":"59.36.84.180","port":63092,"cipher":"auto","uuid":"311f3c4b-90a1-3c5c-a4fe-215cc7c90d02","alterId":0,"tls":false,"skip-cert-verify":true,"network":"ws","ws-opts":{"path":"/","headers":{"host":"{\"Host\":\"de01-cdn.airport-v2.com\"}"}}}
-  - {"name":"defaultName_2","type":"vmess","server":"223.167.41.222","port":63087,"cipher":"auto","uuid":"311f3c4b-90a1-3c5c-a4fe-215cc7c90d02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"defaultName_3","type":"vmess","server":"223.111.129.116","port":63087,"cipher":"auto","uuid":"311f3c4b-90a1-3c5c-a4fe-215cc7c90d02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"defaultName_4","type":"vmess","server":"120.232.179.161","port":63086,"cipher":"auto","uuid":"311f3c4b-90a1-3c5c-a4fe-215cc7c90d02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"defaultName_5","type":"vmess","server":"223.111.129.116","port":63086,"cipher":"auto","uuid":"311f3c4b-90a1-3c5c-a4fe-215cc7c90d02","alterId":0,"tls":true,"skip-cert-verify":true,"network":"tcp"}
-  - {"name":"新加坡","type":"ss","server":"js2.76po.com","port":13002,"password":"mp2UnkIquDVxpw5z","cipher":"chacha20-ietf-poly1305"}
+  - {"name":"defaultName","type":"http","server":"raw.githubusercontent.com/hebe061103/clash/main/config.yaml","port":null}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: 🌍 国外媒体
     type: select
     proxies:
       - 🚀 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: 📲 电报信息
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🚀 节点选择
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🚀 节点选择
       - 🎯 全球直连
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -130,13 +88,7 @@ proxy-groups:
       - 🚀 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 芜湖
-      - defaultName_1
-      - defaultName_2
-      - defaultName_3
-      - defaultName_4
-      - defaultName_5
-      - 新加坡
+      - defaultName
 
 rules:
 # 本地/局域网地址
